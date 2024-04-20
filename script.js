@@ -2,6 +2,14 @@ const character = "#";
 const count = 8;
 const rows = [];
 
+const padRow = (rowNumber, rowCount) => {
+  return (
+    " ".repeat(rowCount - rowNumber) +
+    character.repeat(2 * rowNumber - 1) +
+    " ".repeat(rowCount - rowNumber)
+  );
+};
+
 // for loop includes the terms "iterator", "condition", and "iteration"
 
 // The iterator is a variable you can declare specifically in your for loop
@@ -12,17 +20,27 @@ const rows = [];
 
 // Your iteration statement will tell your loop what to do with the iterator after each run.
 
-for (let i = 0; i < count; i++) {
-  rows.push(i);
+
+// TODO: use a different type of loop
+/* for (let i = 1; i <= count; i++) {
+  // .repeat() method available to strings. This method accepts a number as an argument,
+  // specifying the number of times to repeat the target string.
+  rows.push(padRow(i, count));
+} */
+
+const continueLoop = false;
+const done = 0;
+
+while (continueLoop) {
+    done++;
 }
 
 let result = "";
 
-
-// a for...of loop, which iterates over each item in an iterable object 
+// a for...of loop, which iterates over each item in an iterable object
 // and temporarily assigns it to a variable.
 for (const row of rows) {
-    result = result + row
+  result = result + "\n" + row;
 }
 
 console.log(result);
