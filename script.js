@@ -20,7 +20,6 @@ const padRow = (rowNumber, rowCount) => {
 
 // Your iteration statement will tell your loop what to do with the iterator after each run.
 
-
 // TODO: use a different type of loop
 /* for (let i = 1; i <= count; i++) {
   // .repeat() method available to strings. This method accepts a number as an argument,
@@ -28,11 +27,15 @@ const padRow = (rowNumber, rowCount) => {
   rows.push(padRow(i, count));
 } */
 
-const continueLoop = false;
-const done = 0;
+let continueLoop = false;
+let done = 0;
 
-while (continueLoop) {
-    done++;
+while (done !== count) {
+  done++;
+  rows.push(padRow(done, count));
+  if (done === count) {
+    continueLoop = false;
+  }
 }
 
 let result = "";
