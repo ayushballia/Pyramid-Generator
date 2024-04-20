@@ -35,6 +35,15 @@ for (let i = count; i > 0; i--) {
   rows.push(padRow(i, count));
 }
 
+const numbers = [1, 2, 3];
+const shifted = numbers.shift();
+console.log(shifted);
+
+const unshifted = numbers.unshift(5);
+console.log(unshifted);
+
+console.log(numbers);
+
 let result = "";
 
 // a for...of loop, which iterates over each item in an iterable object
